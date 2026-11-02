@@ -10,3 +10,12 @@ Your AI agent reads that email and starts following the attacker's instructions 
 This is called Prompt Injection.
 
 The scary part? The attacker may not need your password. They may only need to manipulate the instructions your AI agent follows."
+
+----------------------------------------------------------------------------------------------------------------
+OPEN Terminal in VScode under the project and follow below command :
+
+python -m venv .venv
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+pip install langgraph langchain-core fastapi httpx uvicorn
+python demo.py      # Windows PowerShell: $env:PYTHONPATH="."; python demo.py
+uvicorn server:app --reload      # then open http://127.0.0.1:8000/docs
